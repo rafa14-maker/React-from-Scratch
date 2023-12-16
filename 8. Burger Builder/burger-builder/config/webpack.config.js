@@ -469,13 +469,16 @@ module.exports = function (webpackEnv) {
             // of CSS.
             // By default we support CSS Modules with the extension .module.css
             {
-               test: cssRegex,
-               exclude: cssModuleRegex,
-               use: getStyleLoaders({
+              test: cssRegex,
+              exclude: cssModuleRegex,
+              use: getStyleLoaders({
                 importLoaders: 1,
-                 modules: true,
-                  localIdentName: '[name]__[local]__[hash:base64:5]'
-  
+              sourceMap: isEnvProduction
+                  ? shouldUseSourceMap
+                  : isEnvDevelopment,
+                modules: {
+                  mode: 'icss',
+                },
               }),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.

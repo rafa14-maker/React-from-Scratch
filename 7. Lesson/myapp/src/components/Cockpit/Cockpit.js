@@ -4,7 +4,7 @@ import classes from './Cockpit.css';
 
 import AuthContext from '../../context/auth-context';
 
-const cockpit = props => {
+const Cockpit = props => {
   const toggleBtnRef = useRef(null);
   const authContext = useContext(AuthContext);
 
@@ -54,4 +54,4 @@ const cockpit = props => {
   );
 };
 
-export default React.memo(cockpit);
+export default React.memo(Cockpit);
