@@ -1,0 +1,35 @@
+.BurgerItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-size: 1.5rem;
+}
+
+Button{
+    width : 100px;
+    height: 50px;
+    font-size: large;
+    margin-left: 5px;
+}
+
+.Less{
+    background-color: blueviolet;
+}
+
+.Less:disabled{
+    background-color: gray;
+    color : wheat;
+}
+
+.Less:hover{
+    background-color: chartreuse;
+}
+
+.More{
+       background-color: maroon;
+}
+
+.More:hover{
+    background-color: chartreuse;
+}
